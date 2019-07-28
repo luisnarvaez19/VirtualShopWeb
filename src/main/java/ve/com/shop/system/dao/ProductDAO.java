@@ -1,0 +1,11 @@
+package ve.com.shop.system.dao;
+
+import ve.com.shop.system.model.Products;
+import java.util.List;
+
+/**
+ * Created by alejandro on 29/06/2017.
+ */
+public interface ProductDAO {
+    public List<Products> getProducts();
+}

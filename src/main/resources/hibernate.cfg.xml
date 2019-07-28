@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/virtualshop</property>
+        <property name="connection.username">techsoa</property>
+        <property name="connection.password">admin2017</property>
+
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="jdbc.batch_size">300</property>
+        <property name="connection.release_mode">after_transaction</property>
+
+        <mapping class="ve.com.shop.system.model.Users" />
+        <mapping class="ve.com.shop.system.model.Products" />
+        <mapping class="ve.com.shop.system.model.Categories" />
+        <mapping class="ve.com.shop.system.model.ProductTypes" />
+
+    </session-factory>
+</hibernate-configuration>
